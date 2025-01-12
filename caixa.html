@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap" rel="stylesheet">
+    <title>Caixa</title>
+    <style>        
+        /*Header*/
+        header{
+            background-color:white;
+            color: gold;
+            height: 70px;
+            margin-top: 0;
+            border-bottom: 3px solid white;
+            font-family:'Allerta Stencil', Arial, Helvetica, sans-serif;
+            font-weight: normal;
+            text-align: center;  
+        }
+        h1{
+            padding-top: 5px;
+            margin: 0;
+            font-size: 45px;
+        }   
+        h1>img{
+            padding-top: 5px;
+            margin: 0 0 0 7px;
+            font-size: 45px;
+        }
+        header>h1>img{
+            height: 28px;
+            width: 30px;
+        }        
+        .market{
+            color: tomato;
+            text-decoration: none;
+        }
+        .loginheader{
+            color: #41A5EE;
+            text-decoration: none;
+        }
+
+        /*Main*/
+        .main{
+            background-color: rgba(56, 68, 175, 0.849);
+            color: white;
+            display: flex;
+            height: 655px;
+            margin-bottom: 0;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            font-family:'Allerta Stencil', Arial, Helvetica, sans-serif;
+        }
+        /*img*/
+        .imgcar{
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            border-radius: 50%;
+            margin: 40px;
+        }
+        .imgcar>img{
+            width: 200px;
+            height: 200px;
+        }
+        /*opçoes*/
+        .opcoes{
+            background-color: white;
+            color: #41A5EE;
+            width: 200px;
+            height: 280px;
+            margin: 20px auto 0;
+            border-radius: 5px;
+            padding-top: 20px;            
+        }
+        .opcoes>ul{
+            padding: 0;
+            margin: 0;
+        }
+        .btnopcoes{
+            list-style: none;
+            text-decoration: none;  
+        }
+        .btnopcoes>li{
+            background-color: rgba(56, 68, 175, 0.849);
+            color: white;
+            padding: 10px 10px 10px 25px;
+            border: 3px solid  rgba(255, 255, 255, 0.849);
+            border-radius: 10px;
+            width: 130px;
+            margin: 15px auto;
+        }
+        .btnopcoes>li:hover{
+            background-color: white;
+            color: #41A5EE;
+            border: 3px solid #41A5EE;
+        }
+        .btnhome{
+            width: 50px;
+            height: 50px;
+            background-color: rgb(255, 255, 255);
+            margin: 20px 0 0 80px;
+            border: 2px solid white;
+            border-radius: 50%;
+        }
+
+        /*dados da compra*/
+        .ddcaixa{
+            background-color: white;
+            color: rgba(56, 68, 175, 0.849);
+            width: 810px;
+            height: 620px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+        .ddcaixa>ul{
+            display: flex;
+            padding: 0 0 0 25px;
+            margin: 0;
+           
+        }
+        .titlecx{
+            list-style: none;
+            padding: 10px;
+            background-color: rgba(56, 68, 175, 0.849);
+            color: white;
+            width: 260px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+             margin: 20px 0 0 0;
+        }
+        .titlecx1{
+            list-style: none;
+            padding: 10px;
+            background-color: rgba(56, 68, 175, 0.849);
+            color: white;
+            width: 100px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+             margin: 20px 0 0 0;
+        }
+        .spaceinfo{
+            list-style: none;
+            padding: 10px;
+            background-color: white;
+            color: black;
+            width: 98px;
+            border: 1px solid darkslateblue;
+            height: 510px;
+        }
+        .spaceinfo1{
+            list-style: none;
+            padding: 10px;
+            background-color: white;
+            color: black;
+            width: 258px;
+            border: 1px solid darkslateblue;
+        }
+
+         /*à pagar*/
+        .ttlapagar{
+            width: 230px;
+            height: 610px;
+            background-color: white;
+            border-radius: 10px;
+            margin: 30px 20px 20px 20px;
+            text-align: center;
+        }
+        .ttlapagar>ul{
+            margin: 0;
+            padding: 10px 20px;
+        }
+        .ttlapagar>h3{
+            color: #41A5EE;
+
+        }
+        .apagar{
+            background-color: #41A5EE;
+            color: white;
+            font-size: 25px;
+            width: 183px;
+            padding: 5px 0 0 5px;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            margin: 20px 0 0 0;
+            list-style: none;
+        }
+        .vlpagar{
+            padding: 25px;
+            border: 2px solid #41A5EE;
+            border-bottom-right-radius: 15px;
+            border-bottom-left-radius: 15px;
+            color: black;
+            list-style: none;
+            text-align: left;
+        }
+        ul.formapg{
+            display: flex;
+            padding: 0 18px;
+        }
+        .formapg>a{
+            text-decoration: none;
+        }
+        .btnpg{
+            background-color: blue;
+            color: white;
+            width: 80px;
+            padding: 2px;
+            border-radius: 5px;
+            margin: 5px;
+            list-style: none;
+            
+        }
+        /*Footer*/
+        footer{
+            background-color: rgba(0, 0, 0, 0.863);
+            color: white;
+            text-align: center;
+            height: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 10px;
+            margin: 0;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;    
+        }
+        footer>h2>a{
+            color: gold;
+            text-decoration: none;
+        }
+        footer>h2{
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bee<a href="#" class="market">Market</a><img src="img/faviconsemfundo.png" alt="img3">
+        <a href="#" class="loginheader">Caixa</a></h1>
+    </header>
+    <section class="main">
+        <section>
+            <section class="imgcar">
+                <img src="img/carrinho.png" alt="carrinho">
+                <section class="opcoes">
+                    <ul>
+                        <a href="#" class="btnopcoes"><li>Novo Caixa +</li></a>
+                        <a href="#" class="btnopcoes"><li>Consultar</li></a>
+                        <a href="#" class="btnopcoes"><li>Sangria</li></a>
+                        <a href="#" class="btnopcoes"><li>Fechar caixa</li></a>
+                    </ul>
+                </section>
+                <section>
+                    <a href="index.html"><img src="img/btnhome2png.png" alt="btnhome2" class="btnhome"></a>
+                </section>   
+            </section>  
+        </section>
+        <section class="ddcaixa">
+            <ul>
+                <li class="titlecx1">Cód.item</li>
+                <li class="titlecx">Descrição</li>
+                <li class="titlecx1">Valor unid.</li>
+                <li class="titlecx1">Quantidade</li>
+                <li class="titlecx1">Valor total</li>
+            </ul>
+            <ul>
+                <li class="spaceinfo"></li>
+                <li class="spaceinfo1"></li>
+                <li class="spaceinfo"></li>
+                <li class="spaceinfo"></li>
+                <li class="spaceinfo"></li>
+            </ul>
+        </section>
+        <section class="ttlapagar">
+            <ul>
+                <li class="apagar">Total à pagar</li>
+                <li class="vlpagar">R$ </li>
+            </ul>
+            <h3>Forma de pagamento:</h3>
+            <ul class="formapg">
+                <a href="">
+                    <li class="btnpg">Dinheiro</li>
+                </a>
+                <a href="">
+                    <li class="btnpg">Pix</li>
+                </a>
+            </ul>
+            <ul class="formapg">
+                <a href="">
+                    <li class="btnpg">C. Débito</li>
+                </a>
+                <a href="">
+                    <li class="btnpg">C. Crédito</li> 
+                </a>
+            </ul>
+            <ul>
+                <li class="apagar">Vlr recebido</li>
+                <li class="vlpagar">R$ </li>
+            </ul>
+            <ul>
+                <li class="apagar">Troco</li>
+                <li class="vlpagar">R$ </li>
+            </ul>
+        </section>
+    </section>
+    <footer><h2>Desenvolvido por <a href="#">Hivemind Technology</a></h2></footer>
+</body>
+</html>
